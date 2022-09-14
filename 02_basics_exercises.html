@@ -8,9 +8,7 @@
   </head>
   <body>
     <h1>JS EXERCISES</h1>
-    <p id="demo"></p>
-    <p id="demo1"></p>
-    <p id="demo2"></p>
+    <p id="demo">Resultado:</p>
     <script>
       /* 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFunción("Hola Mundo") devolverá 10 */
 
@@ -110,7 +108,7 @@
           : !times
           ? console.warn("No number of times entered")
           : console.info(`${string.repeat(times)} `);
-    	*/
+    	
 
       //SOLUCION:
       //method repeat(count)
@@ -136,6 +134,101 @@
       repeatString("Hello world");
 
       /* 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH" */
+      /*
+      // function to reverse a string
+
+      // program to reverse a string
+
+        function reverseString(str) {
+
+        // return a new array of strings
+        const arrayStrings = str.split("");
+   
+        // reverse the new created array elements
+        const reverseArray = arrayStrings.reverse();
+ 
+        // join all elements of the array into a string
+        const joinArray = reverseArray.join("");
+    
+        // return the reversed string
+        return joinArray;
+        }
+ 
+        // take input from the user
+        const string = prompt('Enter a string: ');
+
+        const result = reverseString(string);
+        console.log(result);
+
+      //SOLUCION:
+      const reverseString = (str = "") =>
+        !str
+          ? console.warn("No string entered")
+          : console.info(str.split("").reverse().join(""));
+
+      reverseString();
+      reverseString("Hello world");
+
+      /* 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2 */
+      /*     
+        function countWord(str = "", word = undefined) {
+        // split the string by spaces and save it in a variable
+        let stringA = str.split(" ");
+
+        //search for pattern in stringA
+        let count = 0;
+        for (let i = 1; i < stringA.length; i++) {
+          //if match found increase count
+          if (word.includes(stringA[i])) {
+            count++;
+          }
+          return count;
+        }
+      }
+        */
+
+      //SOLUCION: Usar indexOf method
+      const wordInString = (str = "", text = "") => {
+        if (!str) return console.warn("No string entered");
+
+        if (!text) return console.warn("No text to check entered");
+
+        let i = 0,
+          count = 0;
+
+        while (i !== -1) {
+          //cuando texto no encontrado, indexOf devuelve -1
+          i = str.indexOf(text, i);
+          if (i !== -1) {
+            i++;
+            count++;
+          }
+        }
+        return console.info(`The word ${text} is repeated ${count} times`);
+      };
+
+      wordInString();
+      wordInString("", "world");
+      wordInString("Hello world bye world");
+      wordInString("Hello world bye world hello hello", "hello");
+
+      //show result in screen --> document.getElementById("demo").innerHTML =
+
+      /* 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true */
+
+      /* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5 */
+
+      /* 9) Programa una función que obtenga un numero aleatorio entre 501 y 600 */
+
+      /* 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true  */
+
+      /* 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120 */
+
+      /* 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true */
+
+      /* 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar */
+
+      /* 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F */
     </script>
   </body>
 </html>
