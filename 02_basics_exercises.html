@@ -280,6 +280,7 @@
 
       /* 9) Programa una función que obtenga un numero aleatorio entre 501 y 600 */
       /*
+      //SOLUCION:
             const randomNumber = (numberMin = undefined, numberMax = undefined) => {
               if (!numberMin) return console.warn("No number min entered");
 
@@ -302,6 +303,7 @@
       /* 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true  */
 
       /*
+      //SOLUCION:
         const capicNumber = (number = undefined) => {
         //no number entered
         if (!number) return console.warn("No number entered");
@@ -315,7 +317,7 @@
 
         //console.log(numberReversed);
 
-         return numberReversed === number
+       return numberReversed === number
           ? console.info(
               `True: is capicua. Original no ${number} & reversed no ${numberReversed}`
             )
@@ -331,7 +333,30 @@
       capicNumber(20102);
 */
       /* 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120 */
+      /*   
+      //SOLUCION:   
+      const factorial = (number = undefined) => {
+        if (number === undefined) return console.warn("Number not entered");
 
+        if (typeof number !== "number")
+          return console.warn(`The value entered "${number}" is not a number`);
+
+        if (number === 0) return console.error("Number can not be 0");
+
+        let factorial = 1;
+
+        for (let i = number; i > 1; i--) {
+          factorial *= i;
+        }
+        return console.info(`Factorial of ${number} is ${factorial}`);
+      };
+
+      factorial();
+      factorial("a");
+      factorial([1, 2, 3, 4]);
+      factorial(0);
+      factorial(4);
+*/
       /* 12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true */
 
       /* 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar */
