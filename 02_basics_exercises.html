@@ -16,207 +16,267 @@
 
       //funcion declarada
       /*
-            function countCharacters(string = "") {
-              if (!string) {
-                console.warn("Empty string entered");
-              } else {
-                console.info(
-                  `String entered "${string}" has ${string.length} characters`
-                );
-              }
-            }
+                           function countCharacters(string = "") {
+                             if (!string) {
+                               console.warn("Empty string entered");
+                             } else {
+                               console.info(
+                                 `String entered "${string}" has ${string.length} characters`
+                               );
+                             }
+                           }
 
-            countCharacters();
-            countCharacters(stringHello);
+                           countCharacters();
+                           countCharacters(stringHello);
 
-            document.getElementById("demo").innerHTML =
-              "Characters number in " + stringHello + ": " + stringHello.length;
+                           document.getElementById("demo").innerHTML =
+                             "Characters number in " + stringHello + ": " + stringHello.length;
 
 
-            //SOLUCION: function expresada - el return esta implicito si no se usan llaves (cuando solo hay una linea de codigo)
-            const countCharacters = (cadena = "") =>
-              !cadena
-                ? console.warn("Empty string entered")
-                : console.info(
-                    `String entered "${cadena}" has ${cadena.length} characters`
-                  );
+                           //SOLUCION: function expresada - el return esta implicito si no se usan llaves (cuando solo hay una linea de codigo)
+                           const countCharacters = (cadena = "") =>
+                             !cadena
+                               ? console.warn("Empty string entered")
+                               : console.info(
+                                   `String entered "${cadena}" has ${cadena.length} characters`
+                                 );
 
-            countCharacters();
-            countCharacters(stringHello);
-            console.clear();
-      */
+                           countCharacters();
+                           countCharacters(stringHello);
+                           console.clear();
+                     */
 
       /* 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFunción("Hola Mundo", 4) devolverá "Hola" */
 
       /*function textTrim(text) {
-              let trimResult = console.log("String cut: " + text.slice(0, 5));
-            }
-            textTrim(stringHello);
+                             let trimResult = console.log("String cut: " + text.slice(0, 5));
+                           }
+                           textTrim(stringHello);
 
-            let text2 = "Hello world!";
-            let result = text2.slice(0, 5);
+                           let text2 = "Hello world!";
+                           let result = text2.slice(0, 5);
 
-            document.getElementById("demo1").innerHTML = "Cut String: " + result;
+                           document.getElementById("demo1").innerHTML = "Cut String: " + result;
 
-            //SOLUCION:
-            const textTrim = (text = "", lenghtText = undefined) =>
-              !text
-                ? console.warn("Empy text entered")
-                : lenghtText === undefined
-                ? console.warn("Lenght to trim text not entered")
-                : console.info(text.slice(0, lenghtText));
+                           //SOLUCION:
+                           const textTrim = (text = "", lenghtText = undefined) =>
+                             !text
+                               ? console.warn("Empy text entered")
+                               : lenghtText === undefined
+                               ? console.warn("Lenght to trim text not entered")
+                               : console.info(text.slice(0, lenghtText));
 
-            textTrim();
-            textTrim("Hola mundo", 4);
-            textTrim("", 2);
-            textTrim("Anacleta");
+                           textTrim();
+                           textTrim("Hola mundo", 4);
+                           textTrim("", 2);
+                           textTrim("Anacleta");
 
-            /* 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.
-            miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal']
-            let text3 = "hello how are you today";
+                           /* 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.
+                           miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal']
+                           let text3 = "hello how are you today";
 
-            function splitArrayElements(text) {
-              console.log("Array separada por elements: " + text.split(" ", 3));
-            }
+                           function splitArrayElements(text) {
+                             console.log("Array separada por elements: " + text.split(" ", 3));
+                           }
 
-            splitArrayElements(text3);
+                           splitArrayElements(text3);
 
-            document.getElementById("demo2").innerHTML =
-              "String converted to Array: " + text3.split(" ", 3);
-     
-      //SOLUCION:
-      const stringToArray = (string = "", spacer = undefined) =>
-        !string
-          ? console.warn("Empty string entered")
-          : spacer === undefined
-          ? console.warn("No spacer entered")
-          : console.info(`${string.split(spacer)}`);
+                           document.getElementById("demo2").innerHTML =
+                             "String converted to Array: " + text3.split(" ", 3);
 
-      stringToArray();
-      stringToArray(
-        "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. ",
-        " "
-      );
-      stringToArray("Hello-how-are-you", "-");
-      stringToArray("This is a string");
- */
+                     //SOLUCION:
+                     const stringToArray = (string = "", spacer = undefined) =>
+                       !string
+                         ? console.warn("Empty string entered")
+                         : spacer === undefined
+                         ? console.warn("No spacer entered")
+                         : console.info(`${string.split(spacer)}`);
+
+                     stringToArray();
+                     stringToArray(
+                       "Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. ",
+                       " "
+                     );
+                     stringToArray("Hello-how-are-you", "-");
+                     stringToArray("This is a string");
+                */
 
       /* 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo */
       /*const repeatString = (string = "", times = undefined) =>
-        !string
-          ? console.warn("Empty string entered")
-          : !times
-          ? console.warn("No number of times entered")
-          : console.info(`${string.repeat(times)} `);
-    	
+                       !string
+                         ? console.warn("Empty string entered")
+                         : !times
+                         ? console.warn("No number of times entered")
+                         : console.info(`${string.repeat(times)} `);
 
-      //SOLUCION:
-      //method repeat(count)
-      const repeatString = (string = "", times = undefined) => {
-        if (!string) return console.warn("Empty string entered");
-        if (times === undefined)
-          return console.warn("No number of times entered");
-        //times = 0
-        if (times === 0) return console.error("No of times can not be cero");
-        //if number of times entered is negative, method Math.sign()
-        if (Math.sign(times) === -1)
-          return console.error("N of times can not be negative");
-        for (let i = 1; i <= times; i++) {
-          console.info(`${string}, ${times}`);
-        }
-      };
 
-      repeatString();
-      repeatString("Hello", 4);
-      repeatString("Hello", 0);
-      repeatString("Hello", -20);
-      repeatString("", 4);
-      repeatString("Hello world");
+                     //SOLUCION:
+                     //method repeat(count)
+                     const repeatString = (string = "", times = undefined) => {
+                       if (!string) return console.warn("Empty string entered");
+                       if (times === undefined)
+                         return console.warn("No number of times entered");
+                       //times = 0
+                       if (times === 0) return console.error("No of times can not be cero");
+                       //if number of times entered is negative, method Math.sign()
+                       if (Math.sign(times) === -1)
+                         return console.error("N of times can not be negative");
+                       for (let i = 1; i <= times; i++) {
+                         console.info(`${string}, ${times}`);
+                       }
+                     };
 
-      /* 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH" */
+                     repeatString();
+                     repeatString("Hello", 4);
+                     repeatString("Hello", 0);
+                     repeatString("Hello", -20);
+                     repeatString("", 4);
+                     repeatString("Hello world");
+
+                     /* 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH" */
       /*
-      // function to reverse a string
+                     // function to reverse a string
 
-      // program to reverse a string
+                     // program to reverse a string
 
-        function reverseString(str) {
+                       function reverseString(str) {
 
-        // return a new array of strings
-        const arrayStrings = str.split("");
-   
-        // reverse the new created array elements
-        const reverseArray = arrayStrings.reverse();
- 
-        // join all elements of the array into a string
-        const joinArray = reverseArray.join("");
-    
-        // return the reversed string
-        return joinArray;
-        }
- 
-        // take input from the user
-        const string = prompt('Enter a string: ');
+                       // return a new array of strings
+                       const arrayStrings = str.split("");
 
-        const result = reverseString(string);
-        console.log(result);
+                       // reverse the new created array elements
+                       const reverseArray = arrayStrings.reverse();
 
-      //SOLUCION:
-      const reverseString = (str = "") =>
-        !str
-          ? console.warn("No string entered")
-          : console.info(str.split("").reverse().join(""));
+                       // join all elements of the array into a string
+                       const joinArray = reverseArray.join("");
 
-      reverseString();
-      reverseString("Hello world");
+                       // return the reversed string
+                       return joinArray;
+                       }
 
-      /* 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2 */
-      /*     
-        function countWord(str = "", word = undefined) {
-        // split the string by spaces and save it in a variable
-        let stringA = str.split(" ");
+                       // take input from the user
+                       const string = prompt('Enter a string: ');
 
-        //search for pattern in stringA
-        let count = 0;
-        for (let i = 1; i < stringA.length; i++) {
-          //if match found increase count
-          if (word.includes(stringA[i])) {
-            count++;
-          }
-          return count;
-        }
-      }
-        */
+                       const result = reverseString(string);
+                       console.log(result);
 
-      //SOLUCION: Usar indexOf method
-      const wordInString = (str = "", text = "") => {
-        if (!str) return console.warn("No string entered");
+                     //SOLUCION:
+                     const reverseString = (str = "") =>
+                       !str
+                         ? console.warn("No string entered")
+                         : console.info(str.split("").reverse().join(""));
 
-        if (!text) return console.warn("No text to check entered");
+                     reverseString();
+                     reverseString("Hello world");
 
-        let i = 0,
-          count = 0;
+                     /* 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2 */
+      /*
+                       function countWord(str = "", word = undefined) {
+                       // split the string by spaces and save it in a variable
+                       let stringA = str.split(" ");
 
-        while (i !== -1) {
-          //cuando texto no encontrado, indexOf devuelve -1
-          i = str.indexOf(text, i);
-          if (i !== -1) {
-            i++;
-            count++;
-          }
-        }
-        return console.info(`The word ${text} is repeated ${count} times`);
-      };
+                       //search for pattern in stringA
+                       let count = 0;
+                       for (let i = 1; i < stringA.length; i++) {
+                         //if match found increase count
+                         if (word.includes(stringA[i])) {
+                           count++;
+                         }
+                         return count;
+                       }
+                     }
 
-      wordInString();
-      wordInString("", "world");
-      wordInString("Hello world bye world");
-      wordInString("Hello world bye world hello hello", "hello");
 
-      //show result in screen --> document.getElementById("demo").innerHTML =
+                     //SOLUCION: Usar indexOf method
+                     const wordInString = (str = "", text = "") => {
+                       if (!str) return console.warn("No string entered");
 
-      /* 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true */
+                       if (!text) return console.warn("No text to check entered");
+
+                       let i = 0,
+                         count = 0;
+
+                       while (i !== -1) {
+                         //cuando texto no encontrado, indexOf devuelve -1
+                         i = str.indexOf(text, i);
+                         if (i !== -1) {
+                           i++;
+                           count++;
+                         }
+                       }
+                       return console.info(`The word ${text} is repeated ${count} times`);
+                     };
+
+                     wordInString();
+                     wordInString("", "world");
+                     wordInString("Hello world bye world");
+                     wordInString("Hello world bye world hello hello", "hello");
+
+                     //show result in screen --> document.getElementById("demo").innerHTML =
+
+
+
+                /* 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true */
+      /*
+                const palindrome = (str = "") => {
+                  let strReversed = str.split("").reverse().join("");
+
+                  if (!str) return console.warn("No string entered");
+
+                  if (str)
+                    return strReversed === str
+                      ? console.info("True: is palindromo")
+                      : console.info("False: is not palindromo");
+                };
+
+                palindrome();
+                palindrome("oso"); // true
+                palindrome("hola"); // false
+                palindrome("omo"); // true
+                palindrome("roma amor"); // true
+                palindrome("verdejo"); //false
+
+                //SOLUCION:
+
+                const palindrome = (str = "") => {
+                  if (!str) return console.warn("No string entered");
+
+                  str = str.toLocaleLowerCase();
+                  let strRev = str.split("").reverse().join("");
+
+                  return strRev === str
+                    ? console.info(
+                        `True: is palindrome. Original word ${str} & reversed word ${strRev}`
+                      )
+                    : console.info(
+                        `False: is not palindromo. Original word ${str} & reversed word ${strRev}`
+                      );
+                };
+
+                palindrome();
+                palindrome("oso"); // true
+                palindrome("hola"); // false
+                palindrome("omo"); // true
+                palindrome("roma amor"); // true
+                palindrome("verdejo"); //false
+                palindrome("cosa asoc");
+          */
 
       /* 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5 */
+      /*    
+      //SOLUCION:
+      const deleteCharacters = (text = "", pattern = "") =>
+        !text
+          ? console.warn("No text entered")
+          : !pattern
+          ? console.warn("No pattern entered")
+          : //method replace() used
+            console.info(text.replace(new RegExp(pattern, "ig"), ""));
+
+      deleteCharacters();
+      deleteCharacters("xyz1, xyz2, xyz3, xyz4 y xyz5");
+      deleteCharacters("xyz1, xyz2, xyz3, xyz4 y xyz5", "xy");
+*/
 
       /* 9) Programa una función que obtenga un numero aleatorio entre 501 y 600 */
 
